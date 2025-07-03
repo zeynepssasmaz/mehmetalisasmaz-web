@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid #B38C5D;
+  background-color: #1A1A1A; /* Siyah ton (önce #111111 idi, değiştirdim) */
+  border-bottom: 1px solid #B38C5D; /* Açık Kahve */
+}
+.home-container {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.home-container h1 {
+  margin-top: 0;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  color: #F4C27D; /* Açık Bej */
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  color: #8A623B; /* Orta Kahve */
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #B38C5D; /* Açık Kahve */
+}
+

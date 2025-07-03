@@ -1,0 +1,81 @@
+.home-container {
+  background-color: #1A1A1A; /* Siyah */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #F4C27D; /* Açık Bej - genel metin rengi */
+  padding: 2rem;
+  overflow: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.project-preview-wrapper {
+  margin-bottom: 6rem;
+  width: 100%;
+}
+
+
+.logo {
+  width: 100vw;
+  height: 110vh;
+  object-fit: contain;
+  margin-bottom: 20px;
+  filter: brightness(1.1); /* Logo için biraz parlaklık */
+}
+
+h1 {
+  color: #B38C5D; /* Açık Kahve */
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  color: #8A623B; /* Orta Kahve */
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .home-container {
+    padding: 30px 15px;
+  }
+
+  .logo {
+    width: 40vw;
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    max-width: 90%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 60vw;
+    max-width: 120px;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+}
+/* GallerySlider bileşeni kendi stilini koruyabilir */
+
