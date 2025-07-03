@@ -15,7 +15,7 @@ const ProjectDetails = () => {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/buildings');
+        const res = await axios.get('${process.env.REACT_APP_API_URL}/api/buildings');
         const found = res.data.find(p => p.slug === slug);
         setProject(found);
       } catch (err) {
