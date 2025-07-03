@@ -8,7 +8,7 @@ const Faq = () => {
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
-        const res = await axios.get('http://localhost:3001/api/faq');
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/faq`);
         setFaqs(res.data);
       } catch (err) {
         console.error('SSS verileri alınamadı:', err);
