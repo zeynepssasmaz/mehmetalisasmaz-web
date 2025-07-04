@@ -10,7 +10,7 @@ const ProjectPreviewGrid = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get('http://localhost:3001/api/buildings');
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/buildings`);
         setProjects(res.data);
       } catch (err) {
         console.error("Projeler alınamadı:", err);
