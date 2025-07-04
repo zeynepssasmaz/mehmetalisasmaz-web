@@ -13,9 +13,14 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors({
-  origin: ['https://mehmetalisasmaz.com', 'https://www.mehmetalisasmaz.com']
-}));
+const corsOptions = {
+  origin: ['https://mehmetalisasmaz.com', 'https://www.mehmetalisasmaz.com'],
+  methods: ['GET', 'POST', 'DELETE'],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 
 app.use(express.json());
 
