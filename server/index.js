@@ -13,7 +13,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://mehmetalisasmaz.com', 'https://www.mehmetalisasmaz.com']
+}));
+
 app.use(express.json());
 
 // Routes
