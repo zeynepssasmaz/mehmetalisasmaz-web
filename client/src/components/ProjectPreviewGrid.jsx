@@ -34,7 +34,7 @@ const ProjectPreviewGrid = () => {
           const imgSrc = p.gorseller?.[0]
             ? p.gorseller[0].startsWith('http')
               ? p.gorseller[0]
-              : `http://localhost:3001/${p.gorseller[0]}`
+              : `${process.env.REACT_APP_API_URL}/${p.gorseller[0]}`
             : '';
 
           return (
