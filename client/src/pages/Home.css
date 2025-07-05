@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: flex-start;
   color: #F4C27D;
-  padding: 2rem;
+  padding: 1rem;
   overflow: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-top: 0;
@@ -16,13 +16,12 @@
 
 /* Logo */
 .logo {
-  width: 60vw;
-  max-width: 300px;
-  margin-bottom: 20px;
+  width: 90vw;
+  max-width: 400px;
+  margin-bottom: 10px;
   filter: brightness(1.1);
   object-fit: contain;
 }
-
 /* Başlık */
 h1 {
   color: #B38C5D;
