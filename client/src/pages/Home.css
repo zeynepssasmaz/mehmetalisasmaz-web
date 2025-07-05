@@ -16,13 +16,13 @@
 
 /* Logo */
 .logo {
-  width: 250px;
-  max-width: 90%;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
   object-fit: contain;
-  margin: 0 auto 30px auto;
   display: block;
+  margin: 0 auto;
   filter: brightness(1.1);
+  padding: 2rem;
 }
 /* Başlık */
 h1 {
