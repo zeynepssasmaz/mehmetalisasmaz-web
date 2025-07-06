@@ -9,29 +9,29 @@ import Contact from './Contact';
 function Home() {
   return (
     <div className="home-page">
-      <section id="home" className="home-section home-logo-section">
-        <div className="logo-wrapper">
+      <section id="home" className="home-logo-section">
+        <div className="home-container">
           <img src="/logo.png" alt="Firma Logosu" className="logo" />
         </div>
       </section>
 
-      <section id="about" className="home-section">
+      <section id="about" className="page-section">
         <About />
       </section>
 
-      <section id="services" className="home-section">
+      <section id="services" className="page-section">
         <Services />
       </section>
 
-      <section id="gallery" className="home-section">
+      <section id="gallery" className="page-section">
         <Gallery />
       </section>
 
-      <section id="faq" className="home-section light-section">
+      <section id="faq" className="page-section page-section-light">
         <Faq />
       </section>
 
-      <section id="contact" className="home-section light-section">
+      <section id="contact" className="page-section page-section-light">
         <Contact />
       </section>
     </div>

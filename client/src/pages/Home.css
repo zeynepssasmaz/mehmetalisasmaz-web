@@ -1,56 +1,63 @@
 /* Ana Sayfa Konteyneri */
 .home-page {
   width: 100%;
-  height: 100vh;
-  overflow-y: scroll;
+  min-height: 100vh;
   scroll-snap-type: y mandatory;
-  scroll-behavior: smooth; /* YUMUŞAK geçiş burası! */
+  scroll-behavior: auto; /* eski haline yakın */
   background-color: #1A1A1A;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-y: auto;
 }
 
-/* Her Sayfa Bölümü */
-.home-section {
+/* Home Section */
+.home-logo-section {
+  width: 100%;
   min-height: 100vh;
-  scroll-snap-align: start;
-  padding: 2rem 1rem;
-  background-color: #1A1A1A;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* Beyaz Arka Planlılar */
-.light-section {
-  background-color: #fff;
-  color: #111;
-}
-
-/* Logo Bölümü */
-.home-logo-section {
+  scroll-snap-align: start;
   background-color: #1A1A1A;
   padding: 0;
 }
 
-/* Logo Wrapper */
-.logo-wrapper {
-  line-height: 0;
+/* Logo Container */
+.home-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
+  justify-content: flex-start;
+  color: #F4C27D;
+  padding: 2rem;
+  overflow: auto;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Logo */
 .logo {
-  max-width: 800px;
-  width: 80%;
-  height: auto;
-  display: block;
-  object-fit: contain;
+  width: 60vw;
+  max-width: 300px;
+  margin-bottom: 20px;
   filter: brightness(1.1);
+  object-fit: contain;
+  display: block;
   vertical-align: bottom;
-  padding: 0 10px;
+}
+
+/* Sayfa Bölümleri */
+.page-section {
+  min-height: 100vh;
+  background-color: #1A1A1A;
+  color: #F4C27D;
+  scroll-snap-align: start;
+  padding: 2rem;
+}
+
+/* Açık Renkli Bölümler */
+.page-section-light {
+  background-color: #fff;
+  color: #111;
 }
 
 /* Başlık */
@@ -74,8 +81,8 @@ p {
 /* Responsive */
 @media (max-width: 768px) {
   .logo {
-    width: 90vw;
-    max-width: none;
+    width: 80vw;
+    max-width: 250px;
   }
 }
 
