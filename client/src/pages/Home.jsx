@@ -9,29 +9,29 @@ import Contact from './Contact';
 function Home() {
   return (
     <div className="home-page">
-      <section id="home" className="home-logo-section">
+      <section id="home" className="home-section home-logo-section">
         <div className="logo-wrapper">
           <img src="/logo.png" alt="Firma Logosu" className="logo" />
         </div>
       </section>
 
-      <section id="about" style={{ minHeight: '100vh' }}>
+      <section id="about" className="home-section">
         <About />
       </section>
 
-      <section id="services" style={{ minHeight: '100vh' }}>
+      <section id="services" className="home-section">
         <Services />
       </section>
 
-      <section id="gallery" style={{ minHeight: '100vh' }}>
+      <section id="gallery" className="home-section">
         <Gallery />
       </section>
 
-      <section id="faq" style={{ minHeight: '100vh',backgroundColor: '#fff' }}>
+      <section id="faq" className="home-section light-section">
         <Faq />
       </section>
 
-      <section id="contact" style={{ minHeight: '100vh',backgroundColor: '#fff' }}>
+      <section id="contact" className="home-section light-section">
         <Contact />
       </section>
     </div>
