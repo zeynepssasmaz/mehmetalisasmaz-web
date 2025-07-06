@@ -16,7 +16,7 @@ function Home() {
     backgroundColor: '#111' // eklendi!
   }}
 >
-      <section id="home" style={{ minHeight: '100vh' }}>
+      <section id="home" className="home-logo-section">
         <div className="home-container">
           <img src="/logo.png" alt="Firma Logosu" className="logo" />
         </div>
