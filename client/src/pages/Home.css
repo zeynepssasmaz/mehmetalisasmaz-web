@@ -1,88 +1,71 @@
+/* Genel ayarlar */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1A1A1A;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #F4C27D;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 /* Ana Sayfa Konteyneri */
 .home-page {
   width: 100%;
   min-height: 100vh;
   scroll-snap-type: y mandatory;
-  scroll-behavior: auto; /* eski haline yakın */
-  background-color: #1A1A1A;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: auto;
 }
 
-/* Home Section */
+/* Logo Bölümü */
 .home-logo-section {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  background-color: #1A1A1A;
   display: flex;
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
-  background-color: #1A1A1A;
   padding: 0;
+  margin: 0;
 }
 
-/* Logo Container */
+/* İçerik Konteyneri */
 .home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  color: #F4C27D;
-  padding: 2rem;
-  overflow: auto;
-  margin-top: 0;
-  padding-top: 0;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
-/* Logo */
+/* Logo Görseli */
 .logo {
-  width: 200px;
-  max-width: 100%;
-  margin-bottom: 20px;
+  width: 220px;
+  max-width: 90%;
   filter: brightness(1.1);
   object-fit: contain;
   display: block;
-  vertical-align: bottom;
 }
 
-/* Sayfa Bölümleri */
+/* Masaüstü için logo daha büyük */
+@media (min-width: 1024px) {
+  .logo {
+    width: 400px;
+  }
+}
+
+/* Diğer Bölümler */
 .page-section {
+  width: 100%;
   min-height: 100vh;
-  background-color: #1A1A1A;
-  color: #F4C27D;
   scroll-snap-align: start;
   padding: 2rem;
-}
-
-/* Açık Renkli Bölümler */
-.page-section-light {
-  background-color: #fff;
-  color: #111;
-}
-
-/* Başlık */
-h1 {
-  color: #B38C5D;
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-/* Açıklama */
-p {
-  color: #8A623B;
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  max-width: 600px;
-  text-align: center;
-  line-height: 1.5;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .logo {
-    width: 80vw;
-    max-width: 250px;
-  }
+  background-color: #1A1A1A;
+  color: #F4C27D;
 }
 
