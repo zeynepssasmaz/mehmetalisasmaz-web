@@ -1,36 +1,43 @@
 /* Ana konteyner */
-.home-container {
+.home-page {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
   background-color: #1A1A1A;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  color: #F4C27D;
-  padding: 1rem 1rem 2rem;
-  overflow: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: 0;
-  padding-top: 0;
+}
+
+/* Logo Section */
+.home-logo-section {
+  width: 100%;
+  height: 100vh;
+  background-color: #1A1A1A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+/* Logo Wrapper */
+.logo-wrapper {
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 /* Logo */
-.home-logo-section {
-  width: 100vw;
-  height: 100vh;
-  background-color: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 2rem;
-}
-
 .logo {
-  width: 80%;
   max-width: 800px;
+  width: 80%;
   height: auto;
+  display: block;
   object-fit: contain;
   filter: brightness(1.1);
+  vertical-align: bottom;
+  padding: 0 10px;
 }
 
 /* Başlık */
@@ -64,53 +71,55 @@ p {
 /* Navbar Logo */
 .navbar-logo {
   font-size: 1.5rem;
-  color: #F4C27D;
   font-weight: bold;
+  color: #F4C27D;
 }
 
-/* Navbar Linkler */
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #F4C27D;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navbar Links */
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-/* Navbar Link Stil */
 .navbar-links a {
   color: #8A623B;
-  font-weight: 500;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: 500;
 }
 
-.navbar-links a:hover {
-  color: #B38C5D;
-}
-
-/* Proje kartları bölümü */
-.project-preview-wrapper {
-  margin-bottom: 6rem;
-  width: 100%;
-}
-
-/* Mobil Uyum */
+/* Mobile Media Query */
 @media (max-width: 768px) {
-  .home-container {
-    padding: 30px 15px;
-  }
-
   .logo {
-    width: 95%;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .navbar-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    width: 90vw;
+    max-width: none;
+    margin: 10px auto;
   }
 }
 

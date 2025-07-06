@@ -8,16 +8,9 @@ import Contact from './Contact';
 
 function Home() {
   return (
-    <div
- style={{
-    scrollSnapType: 'y mandatory',
-    overflowY: 'scroll',
-    height: '100vh',
-    backgroundColor: '#111' // eklendi!
-  }}
->
+    <div className="home-page">
       <section id="home" className="home-logo-section">
-        <div className="home-container">
+        <div className="logo-wrapper">
           <img src="/logo.png" alt="Firma Logosu" className="logo" />
         </div>
       </section>
