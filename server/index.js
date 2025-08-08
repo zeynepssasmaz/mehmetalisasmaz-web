@@ -1,5 +1,6 @@
 // server/index.js
-
+import compression from 'compression';
+app.use(compression());
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');

@@ -6,6 +6,8 @@ const Faq = require('../models/Faq');
 router.get('/', async (req, res) => {
   try {
     const faqs = await Faq.find();
+    .sort({ createdAt: -1 }) // Yeni eklenenler önce gelsin
+    .lean(); // Mongoose dokümanını düz objeye çevir, daha hızlı
     res.json(faqs);
   } catch (err) {
     res.status(500).json({ error: err.message });

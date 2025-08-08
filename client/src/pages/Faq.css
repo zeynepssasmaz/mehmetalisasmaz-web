@@ -1,4 +1,4 @@
-.faq-container {
+  .faq-container {
   max-width: 800px;
   margin: 4rem auto 3rem auto;
   padding: 1rem;
@@ -37,3 +37,36 @@
   color: #cccccc;
   font-size: 1rem;
 }
+.faq-loading {
+  text-align: center;
+  color: #fff;
+  padding: 3rem 0;
+}
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: #D4AF37;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 1rem auto;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Açılış-kapanış animasyonu */
+.faq-item p {
+  margin-top: 0.5rem;
+  color: #ccc;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.faq-item[open] p {
+  max-height: 500px;
+  opacity: 1;
+}
+

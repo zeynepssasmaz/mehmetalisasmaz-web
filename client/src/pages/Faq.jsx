@@ -4,19 +4,34 @@ import './Faq.css';
 
 const Faq = () => {
   const [faqs, setFaqs] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/faq`); 
+        const res = await axios.get(
+          `${process.env.REACT_APP_API_URL}/api/faq`,
+          { headers: { 'Cache-Control': 'no-cache' } }
+        );
         setFaqs(res.data);
       } catch (err) {
         console.error('SSS verileri alınamadı:', err);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchFaqs();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="faq-loading">
+        <div className="spinner"></div>
+        <p>Yükleniyor...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="faq-container">
@@ -34,3 +49,4 @@ const Faq = () => {
 };
 
 export default Faq;
+

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import './ProjectDetails.css';
+import optimizeImage from '../optimizeImage';
 
 const ProjectDetails = () => {
   const { slug } = useParams();
@@ -55,13 +56,17 @@ const ProjectDetails = () => {
         {images.map((img, idx) => (
           <div
             key={idx}
-            className="project-img-box"
+            className="project-image-wrapper"
             onClick={() => {
               setPhotoIndex(idx);
               setIsOpen(true);
             }}
           >
-            <img src={img} alt={`Görsel ${idx}`} className="project-img" />
+            <img
+              src={optimizeImage(img)}
+              alt={`${project.apartman} - ${idx + 1}`}
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
@@ -69,9 +74,9 @@ const ProjectDetails = () => {
       {/* Lightbox */}
       {isOpen && (
         <Lightbox
-          mainSrc={images[photoIndex]}
-          nextSrc={images[(photoIndex + 1) % images.length]}
-          prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+          mainSrc={optimizeImage(images[photoIndex])}
+          nextSrc={optimizeImage(images[(photoIndex + 1) % images.length])}
+          prevSrc={optimizeImage(images[(photoIndex + images.length - 1) % images.length])}
           onCloseRequest={() => setIsOpen(false)}
           onMovePrevRequest={() =>
             setPhotoIndex((photoIndex + images.length - 1) % images.length)
