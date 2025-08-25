@@ -16,15 +16,16 @@ function App() {
       <ScrollToTop />
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/neden-biz" element={<About />} />
-        <Route path="/hizmetler" element={<Services />} />
-        <Route path="/hizmetler/:slug" element={<ServiceDetail />} />
-        <Route path="/galeri" element={<Gallery />} />
-        <Route path="/sss" element={<Faq />} />
-        <Route path="/iletisim" element={<Contact />} />
-        <Route path="/gallery/:slug" element={<ProjectDetails />} />
-      </Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/neden-biz" element={<About />} />
+  <Route path="/hizmetler" element={<Services />} />
+  <Route path="/hizmetler/:slug" element={<ServiceDetail />} />
+  <Route path="/galeri" element={<Gallery />} />
+  <Route path="/sss" element={<Faq />} />
+  <Route path="/iletisim" element={<Contact />} />
+  <Route path="/gallery/:slug" element={<ProjectDetails />} />
+</Routes>
+
     </Router>
   );
 }
