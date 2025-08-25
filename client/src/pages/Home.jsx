@@ -16,8 +16,8 @@ function Home() {
 
           {/* CTA Butonları */}
           <div className="cta-buttons">
-            <a href="tel:+905551112233" className="cta-btn">📞 Hemen Ara</a>
-            <a href="https://wa.me/905551112233" target="_blank" rel="noreferrer" className="cta-btn">💬 WhatsApp</a>
+            <a href="tel:+905323071998" className="cta-btn">📞 Hemen Ara</a>
+            <a href="https://wa.me/905323071998" target="_blank" rel="noreferrer" className="cta-btn">💬 WhatsApp</a>
             <a href="#contact" className="cta-btn">✉️ İletişime Geç</a>
           </div>
         </div>
