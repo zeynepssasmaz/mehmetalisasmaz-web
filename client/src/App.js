@@ -7,7 +7,7 @@ import Gallery from './pages/Gallery';
 import Faq from './pages/Faq';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
-import ProjectDetails from './pages/ProjectDetails'; 
+import ProjectDetails from './pages/ProjectDetails';
 import ServiceDetail from './components/ServiceDetail';
 
 function App() {
@@ -18,12 +18,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/neden-biz" element={<About />} />
-        <Route path="/" element={<Services />} />
+        <Route path="/hizmetler" element={<Services />} />
         <Route path="/hizmetler/:slug" element={<ServiceDetail />} />
         <Route path="/galeri" element={<Gallery />} />
         <Route path="/sss" element={<Faq />} />
         <Route path="/iletisim" element={<Contact />} />
-	<Route path="/gallery/:slug" element={<ProjectDetails />} />
+        <Route path="/gallery/:slug" element={<ProjectDetails />} />
       </Routes>
     </Router>
   );
