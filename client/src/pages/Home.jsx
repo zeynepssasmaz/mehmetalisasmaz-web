@@ -14,12 +14,8 @@ function Home() {
           {/* Firma Logosu */}
           <img src="/logo.png" alt="Firma Logosu" className="logo" />
 
-          {/* CTA Butonları */}
-          <div className="cta-buttons">
-            <a href="tel:+905323071998" className="cta-btn">📞 Hemen Ara</a>
-            <a href="https://wa.me/905323071998" target="_blank" rel="noreferrer" className="cta-btn">💬 WhatsApp</a>
-            <a href="#contact" className="cta-btn">✉️ İletişime Geç</a>
-          </div>
+          {/* Kaydırma Oku */}
+          <a href="#about" className="scroll-down">↓</a>
         </div>
       </section>
 
@@ -42,6 +38,13 @@ function Home() {
       <section id="contact" className="page-section">
         <Contact />
       </section>
+
+      {/* Sağ altta sabit iletişim ikonları */}
+      <div className="floating-buttons">
+        <a href="tel:+905323071998" title="Hemen Ara">📞</a>
+        <a href="https://wa.me/905323071998" target="_blank" rel="noreferrer" title="WhatsApp">💬</a>
+        <a href="#contact" title="İletişime Geç">✉️</a>
+      </div>
     </div>
   );
 }

@@ -1,49 +1,50 @@
 // server/index.js
-import compression from 'compression';
-app.use(compression());
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const compression = require('compression');
 require('dotenv').config();
 
 const app = express();
 
-// EN ÜSTE log middleware
+// Log middleware (istekleri görmek için)
 app.use((req, res, next) => {
   console.log(`Yeni istek: ${req.method} ${req.url}`);
   next();
 });
 
+// CORS ayarları
 const corsOptions = {
-  origin: ['https://mehmetalisasmaz.com', 'https://www.mehmetalisasmaz.com'],
+  origin: ['http://localhost:3000', 'https://mehmetalisasmaz.com', 'https://www.mehmetalisasmaz.com'],
   methods: ['GET', 'POST', 'DELETE'],
   credentials: true,
 };
-
 app.use(cors(corsOptions));
 
-
+// Middleware
 app.use(express.json());
+app.use(compression());
 
-// Routes
-const faqRouter = require('./routes/Faq');
-app.use('/api/faq', faqRouter);
 
 const buildingRoutes = require('./routes/buildings');
 app.use('/api/buildings', buildingRoutes);
 
 // MongoDB bağlantısı
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('MongoDB bağlantısı başarılı'))
-  .catch(err => console.error('MongoDB bağlantı hatası:', err));
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log('✅ MongoDB bağlantısı başarılı'))
+  .catch(err => console.error('❌ MongoDB bağlantı hatası:', err));
 
 // Test route
 app.get('/', (req, res) => {
-  res.send('API Çalışıyor');
+  res.send('API Çalışıyor 🚀');
 });
 
 // Server listen
-app.listen(process.env.PORT, () => {
-  console.log(`Sunucu ${process.env.PORT} portunda çalışıyor`);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`✅ Sunucu ${PORT} portunda çalışıyor`);
 });
 

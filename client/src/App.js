@@ -23,7 +23,7 @@ function App() {
   <Route path="/galeri" element={<Gallery />} />
   <Route path="/sss" element={<Faq />} />
   <Route path="/iletisim" element={<Contact />} />
-  <Route path="/gallery/:slug" element={<ProjectDetails />} />
+  <Route path="/galeri/:slug" element={<ProjectDetails />} />
 </Routes>
 
     </Router>

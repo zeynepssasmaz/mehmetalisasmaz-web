@@ -30,14 +30,28 @@
 
 .project-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr; /* Mobil: tek sütun */
   gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .project-images {
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 sütun */
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-images {
+    grid-template-columns: repeat(3, 1fr); /* Büyük ekran: 3 sütun */
+  }
 }
 
 .project-img-box {
   cursor: pointer;
   overflow: hidden;
   border-radius: 10px;
+  max-height: 500px; /* Çok uzun resimlerin taşmasını önler */
+  position: relative;
 }
 
 .project-img {
@@ -56,5 +70,12 @@
   color: white;
   padding: 2rem;
   text-align: center;
+}
+
+/* Lightbox için responsive küçük iyileştirme */
+.ReactModal__Content {
+  max-width: 95%;
+  max-height: 95%;
+  margin: auto;
 }
 
